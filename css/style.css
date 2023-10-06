@@ -1,6 +1,7 @@
 #maincontainer{
     
     display:flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -9,5 +10,15 @@
     min-height: 75px;
 }
 button{
-    min-width: 100px;
+    min-width: 75px;
+}
+.row{
+    width: 100vw;
+}
+.input-group{
+    display: flex;
+    justify-content: center;
+}
+.decimalbutton{
+    min-width: 120px;
 }
