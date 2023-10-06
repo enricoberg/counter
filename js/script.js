@@ -26,7 +26,7 @@ function displayNumber(number) {
   let decimals = Math.abs((number % 1) * 100);
   let integerpart = number>0 ? Math.floor(number) : Math.ceil(number);
   integerpart= integerpart==100 ? 0 : integerpart;
-  console.log(number);
-  box.value = integerpart;
-  decimalbox.value = (number < 0 ? "-" : "") + String(Math.abs(decimals).toFixed(0)).padStart(2, "0");
+  
+  box.value = (number<0 && number>-1)? "-0" : integerpart;
+  decimalbox.value =  String(Math.abs(decimals).toFixed(0)).padStart(2, "0");
 }
