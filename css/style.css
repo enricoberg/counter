@@ -1,0 +1,13 @@
+#maincontainer{
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.input-group{
+    min-height: 75px;
+}
+button{
+    min-width: 100px;
+}
