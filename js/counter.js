@@ -41,63 +41,78 @@ sub1.addEventListener("click", () => {
 
 //----------------------------------------------------
 //EVENTS FOR HANDLING PROLONGED CLICKS----------------
-
-add100.addEventListener("mousedown",()=>{
+function startTimer(increment){
   
-  numbertimer=setInterval(()=>{
-    currentNumber = (currentNumber  + 1);
+    numbertimer=setInterval(()=>{
+    currentNumber += increment;
     displayNumber(currentNumber);
   },timerspeed);
 
-
+}
+function stopTimer(){
+  clearInterval(numbertimer);
+  numbertimer=null;
+}
+add100.addEventListener("mousedown", () => {
+  startTimer(1);
 });
 
-add100.addEventListener("mouseup",()=>{
-clearInterval(numbertimer);
-numbertimer=null;
+add100.addEventListener("mouseup", () => {
+  stopTimer();
 });
 
-add1.addEventListener("mousedown",()=>{
-  
-  numbertimer=setInterval(()=>{
-    currentNumber = (currentNumber  + 0.01);
-    displayNumber(currentNumber);
-  },timerspeed);
-
-
+add1.addEventListener("mousedown", () => {
+  startTimer(0.01);
 });
 
-add1.addEventListener("mouseup",()=>{
-clearInterval(numbertimer);
-numbertimer=null;
+add1.addEventListener("mouseup", () => {
+  stopTimer();
 });
 
-sub100.addEventListener("mousedown",()=>{
-  
-  numbertimer=setInterval(()=>{
-    currentNumber = (currentNumber  - 1);
-    displayNumber(currentNumber);
-  },timerspeed);
-
-
+sub100.addEventListener("mousedown", () => {
+  startTimer(-1);
 });
 
-sub100.addEventListener("mouseup",()=>{
-clearInterval(numbertimer);
-numbertimer=null;
+sub100.addEventListener("mouseup", () => {
+  stopTimer();
 });
 
-sub1.addEventListener("mousedown",()=>{
-  
-  numbertimer=setInterval(()=>{
-    currentNumber = (currentNumber  - 0.01);
-    displayNumber(currentNumber);
-  },timerspeed);
-
-
+sub1.addEventListener("mousedown", () => {
+  startTimer(-0.01);
 });
 
-sub1.addEventListener("mouseup",()=>{
-clearInterval(numbertimer);
-numbertimer=null;
+sub1.addEventListener("mouseup", () => {
+  stopTimer();
+});
+//ADD ALSO EVENT FOR MOBILE USE
+add100.addEventListener("touchstart", () => {
+  startTimer(1);
+});
+
+add100.addEventListener("touchend", () => {
+  stopTimer();
+});
+
+add1.addEventListener("touchstart", () => {
+  startTimer(0.01);
+});
+
+add1.addEventListener("touchend", () => {
+  stopTimer();
+});
+
+sub100.addEventListener("touchstart", () => {
+  startTimer(-1);
+});
+
+sub100.addEventListener("touchend", () => {
+  stopTimer();
+});
+
+sub1.addEventListener("touchstart", () => {
+  startTimer(-0.01);
+});
+
+sub1.addEventListener("touchend", () => {
+  stopTimer();
 });

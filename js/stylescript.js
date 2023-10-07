@@ -1,11 +1,24 @@
 let background=document.querySelector("#maincontainer");
-let probuttons=document.querySelectorAll(".professional");
+let prorow=document.querySelector(".professional");
+prorow.style.display = "block";
 background.style.backgroundColor="rgb(238, 238, 238)";
+
 document.querySelector("#themebutton").addEventListener("click",()=>{     
     background.style.backgroundColor= (background.style.backgroundColor==="rgb(238, 238, 238)")? "rgb(50, 50, 50)" : "rgb(238, 238, 238)";        
 });
+
 document.querySelector("#modebutton").addEventListener("click",()=>{
-    probuttons.forEach(element => {
-        element.style.display = (element.style.display ==="block")? "none" : "block";
+        
+        prorow.style.display = (prorow.style.display ==="block")? "none" : "block";
     });
-});
+
+
+//LOOP DEL COLORE DEL TITOLO 
+const h1Element = document.querySelector("h1");
+const colors=["#0d6efd","#6610f2","#6f42c1","#d63384","#dc3545","#fd7e14","#ffc107","#198754","#20c997","#0dcaf0"];
+let currentIndex = 0;
+function changeColor() {
+    h1Element.style.color =  colors[currentIndex];
+    currentIndex = (currentIndex + 1) % colors.length;
+}
+setInterval(changeColor, 250);
