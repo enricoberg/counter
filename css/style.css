@@ -22,3 +22,18 @@ button{
 .decimalbutton{
     min-width: 120px;
 }
+.square{
+    width: 100px;
+    border-radius: 5px;
+    text-align:center;
+    
+    
+    position: fixed;
+    top: 10px;
+}
+#themebutton{
+    right: 10px;
+}
+#modebutton{
+    left: 10px;
+}

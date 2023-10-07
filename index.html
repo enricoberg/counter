@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="./css/bootstrap.css">
 </head>
 <body>
+    <div id="themebutton" class="btn btn-danger square">
+        CHANGE THEME
+    </div>
+    <div id="modebutton" class="btn btn-warning square">
+        CHANGE MODE
+    </div>
     <div class="container-fluid " id="maincontainer">
         <div class="row">
             <div class="col-11 col-lg-6 mx-auto" >
@@ -16,25 +22,26 @@
                     <button class="btn  btn-danger" type="button" id="button-minus">-1</button>
                     <input type="text" id="valuebox" value="0" class="form-control text-center" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" readonly>
                     <span class="input-group-text" id="basic-addon1">,</span>
-                    <input type="text" id="decimalbox" value="00" class="form-control text-center" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" readonly>
+                    <input type="text" id="decimalbox" value="00" class="form-control text-center " placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" readonly>
                     <button class="btn  btn-primary" type="button" id="button-plus">+1</button>
                 </div>
                 
             </div>
         </div>
-        <div class="row">
+        <div class="row professional">
             <div class="col-11 col-lg-6 mx-auto">
                 <div class="input-group ">
-                    <button class="btn  btn-warning decimalbutton" type="button" id="decimal-minus">-1/100</button>
+                    <button class="btn  btn-warning decimalbutton professional" type="button" id="decimal-minus">-1/100</button>
                     
-                    <button class="btn  btn-info decimalbutton" type="button" id="decimal-plus">+1/100</button>
+                    <button class="btn  btn-info decimalbutton professional" type="button" id="decimal-plus">+1/100</button>
                 </div>
             </div>
         </div>
     </div>
     
 
-<script src="./js/script.js"></script>
+<script src="./js/counter.js"></script>
+<script src="./js/stylescript.js"></script>
 <script src="./js/bootstrap.bundle.js"></script>
 </body>
 </html>
