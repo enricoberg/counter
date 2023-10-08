@@ -1,5 +1,7 @@
 let background=document.querySelector("#maincontainer");
 let prorow=document.querySelector(".professional");
+let modebutton= document.querySelector("#modebutton");
+modebutton.innerHTML="BASIC MODE";
 prorow.style.display = "block";
 background.style.backgroundColor="rgb(238, 238, 238)";
 
@@ -7,8 +9,8 @@ document.querySelector("#themebutton").addEventListener("click",()=>{
     background.style.backgroundColor= (background.style.backgroundColor==="rgb(238, 238, 238)")? "rgb(50, 50, 50)" : "rgb(238, 238, 238)";        
 });
 
-document.querySelector("#modebutton").addEventListener("click",()=>{
-        
+modebutton.addEventListener("click",()=>{
+        modebutton.innerHTML= ( modebutton.innerHTML  ==="PRO MODE")? "BASIC MODE" : "PRO MODE";
         prorow.style.display = (prorow.style.display ==="block")? "none" : "block";
     });
 

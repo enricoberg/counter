@@ -84,8 +84,11 @@ sub1.addEventListener("mousedown", () => {
 sub1.addEventListener("mouseup", () => {
   stopTimer();
 });
-//ADD ALSO EVENT FOR MOBILE USE
-add100.addEventListener("touchstart", () => {
+//----------------------------------------------------
+//EVENTS FOR MOBILE USE-------------------------------
+
+add100.addEventListener("touchstart", (event) => {
+  event.preventDefault();
   startTimer(1);
 });
 
@@ -93,7 +96,8 @@ add100.addEventListener("touchend", () => {
   stopTimer();
 });
 
-add1.addEventListener("touchstart", () => {
+add1.addEventListener("touchstart", (event) => {
+  event.preventDefault();
   startTimer(0.01);
 });
 
@@ -101,7 +105,8 @@ add1.addEventListener("touchend", () => {
   stopTimer();
 });
 
-sub100.addEventListener("touchstart", () => {
+sub100.addEventListener("touchstart", (event) => {
+  event.preventDefault();
   startTimer(-1);
 });
 
@@ -109,7 +114,8 @@ sub100.addEventListener("touchend", () => {
   stopTimer();
 });
 
-sub1.addEventListener("touchstart", () => {
+sub1.addEventListener("touchstart", (event) => {
+  event.preventDefault();
   startTimer(-0.01);
 });
 
